@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: black;
+    color: #0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Matrix фон */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Шапка */
+header {
+    padding: 20px 0;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 15px #0f0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Навигация */
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0f0;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover {
+    background: #0f0;
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px #0f0;
+}
+
+/* Страница о клубе */
+.about-page {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-page p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Особенности */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    border-left: 3px solid #0f0;
+    border-right: 3px solid #0f0;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.feature p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Подвал */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+/* Gallery Styles */
+.gallery-section {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-image {
+    min-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: #0f0;
+    color: black;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+.gallery-prev {
+    left: 10px;
+}
+
+.gallery-next {
+    right: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border: 2px solid #0f0;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #0f0;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.modal-close:hover {
+    color: #fff;
+    text-shadow: 0 0 15px #fff;
+}
+
+
+/* Медиа запросы */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .about-page {
+        margin: 0 20px;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 20px;
+    }
+    .gallery-section h2 {
+        font-size: 24px;
+    }
+
+    .gallery-image {
+        height: 300px;
+    }
+
+    .gallery-prev,
+    .gallery-next {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+}
