@@ -29,7 +29,7 @@
         <div class="container">
             <h1>Про клуб</h1>
             <div class="about-page">
-                <p>Matrix — це не просто комп'ютерний клуб, а справжній рай для геймерів. Тут є все для комфортної гри та відпочинку.</p>
+                <p>Matrix — це не просто комп'ютерний клуб, а справжній рай для геймерів. Тут є все для комфортної гри т[...]</p>
 
                 <div class="features">
                     <div class="feature">
@@ -43,7 +43,7 @@
                 </div>
                 
                 <div class="gallery-section">
-                    <h2>Фото та відео клубу</h2>
+                    <h2>Фото клубу</h2>
                     <div class="gallery-container">
                         <div class="gallery-wrapper">
                             <!-- Images will be loaded dynamically via JavaScript -->
@@ -52,17 +52,37 @@
                         <button class="gallery-next">&#10095;</button>
                     </div>
                 </div>
+
+                <div class="video-section">
+                    <h2>Відео клубу</h2>
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <!-- Videos will be loaded dynamically via JavaScript -->
+                        </div>
+                        <button class="video-prev">&#10094;</button>
+                        <button class="video-next">&#10095;</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- Modal for image preview -->
     <div class="modal" id="imageModal">
-    <span class="modal-close">&times;</span>
-    <button class="modal-prev">&#10094;</button>
-    <button class="modal-next">&#10095;</button>
-    <img class="modal-content" id="modalImage">
-</div>
+        <span class="modal-close">&times;</span>
+        <button class="modal-prev">&#10094;</button>
+        <button class="modal-next">&#10095;</button>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Modal for video preview -->
+    <div class="modal" id="videoModal">
+        <span class="modal-close">&times;</span>
+        <video class="modal-content" id="modalVideo" controls>
+            <source src="" type="video/mp4">
+            Ваш браузер не підтримує відео.
+        </video>
+    </div>
 
     <footer>
         <div class="container">
