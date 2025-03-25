@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="img/shortcut_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles_about.css">
 </head>
+
 <body>
     <canvas id="matrix"></canvas>
 
@@ -29,7 +31,8 @@
         <div class="container">
             <h1>Про клуб</h1>
             <div class="about-page">
-                <p>Matrix — це не просто комп'ютерний клуб, а справжній рай для геймерів. Тут є все для комфортної гри т[...]</p>
+                <p>Matrix — це не просто комп'ютерний клуб, а справжній рай для геймерів. Тут є все для комфортної гри
+                    та відпочинку.</p>
 
                 <div class="features">
                     <div class="feature">
@@ -41,47 +44,40 @@
                         <p>Жодних лагів! Найкраще з'єднання для онлайн-ігор.</p>
                     </div>
                 </div>
-                
-                <div class="gallery-section">
+
+                <div class="gallery-section" data-type="photo">
                     <h2>Фото клубу</h2>
                     <div class="gallery-container">
-                        <div class="gallery-wrapper">
-                            <!-- Images will be loaded dynamically via JavaScript -->
-                        </div>
-                        <button class="gallery-prev">&#10094;</button>
-                        <button class="gallery-next">&#10095;</button>
+                        <div class="gallery-wrapper"></div>
+                        <button class="gallery-prev">❮</button>
+                        <button class="gallery-next">❯</button>
                     </div>
                 </div>
 
-                <div class="video-section">
+                <div class="gallery-section" data-type="video">
                     <h2>Відео клубу</h2>
-                    <div class="video-container">
-                        <div class="video-wrapper">
-                            <!-- Videos will be loaded dynamically via JavaScript -->
-                        </div>
-                        <button class="video-prev">&#10094;</button>
-                        <button class="video-next">&#10095;</button>
+                    <div class="gallery-container">
+                        <div class="gallery-wrapper"></div>
+                        <button class="gallery-prev">❮</button>
+                        <button class="gallery-next">❯</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Modal for image preview -->
-    <div class="modal" id="imageModal">
-        <span class="modal-close">&times;</span>
-        <button class="modal-prev">&#10094;</button>
-        <button class="modal-next">&#10095;</button>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <!-- Modal for video preview -->
-    <div class="modal" id="videoModal">
-        <span class="modal-close">&times;</span>
-        <video class="modal-content" id="modalVideo" controls>
-            <source src="" type="video/mp4">
-            Ваш браузер не підтримує відео.
-        </video>
+    <!-- Modal for media preview -->
+    <div class="modal" id="mediaModal">
+        <span class="modal-close">×</span>
+        <button class="modal-prev">❮</button>
+        <button class="modal-next">❯</button>
+        <div class="modal-content">
+            <img id="modalImage" style="display: none;">
+            <video id="modalVideo" controls style="display: none;">
+                <source src="" type="video/mp4">
+                Ваш браузер не підтримує відео.
+            </video>
+        </div>
     </div>
 
     <footer>
@@ -92,4 +88,5 @@
 
     <script src="script_about.js"></script>
 </body>
+
 </html>
