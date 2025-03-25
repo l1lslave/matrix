@@ -89,7 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = [
         'img/club_photo_1.jpg',
         'img/club_photo_2.jpg',
-        'img/club_photo_3.jpg'
+        'img/club_photo_3.jpg',
+		'img/club_photo_5.jpg',
+		'img/club_photo_6.jpg',
+		'img/club_photo_7.jpg',
+		'img/club_photo_8.jpg',
     ];
 
     let currentIndex = 0;
